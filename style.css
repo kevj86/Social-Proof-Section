@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+  /* Font Attributes */
+  --font-league-spartan: "League Spartan", sans-serif;
+
+  /* Colours */
+  --clr-magenta: hsl(303, 10%, 53%);
+  --clr-dark-magenta: hsl(300, 43%, 22%);
+  --clr-light-magenta: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-soft-pink: hsl(333, 80%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-league-spartan);
+  margin-top: 5rem;
+  background: url(/images/bg-pattern-top-desktop.svg) no-repeat;
+}
+/* MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.1ch;
+}
+
+.header h1 {
+  width: 400px;
+  font-size: 3.5rem;
+  color: var(--clr-dark-magenta);
+  padding-bottom: 2rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--clr-magenta);
+  line-height: 1.2;
+  width: 450px;
+}
+
+/* REVIEWS */
+.review {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: center;
+}
+.star {
+  width: 400px;
+  background-color: var(--clr-light-magenta);
+  color: var(--clr-dark-magenta);
+
+  font-weight: 700;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.star-1 {
+  align-self: flex-start;
+}
+
+.star-2 {
+  align-self: center;
+}
+
+.star-3 {
+  align-self: flex-end;
+}
+
+/* TESTIMONIALS */
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.card {
+  background-color: var(--clr-dark-magenta);
+  color: var(--clr-white);
+
+  width: 400px;
+  height: 250px;
+
+  padding: 2rem;
+
+  border-radius: 10px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50px;
+}
+
+.card2 {
+  margin-top: 2rem;
+}
+
+.card3 {
+  margin-top: 4rem;
+}
+
+.card p {
+  padding-top: 1rem;
+  line-height: 1.2;
+}
+
+.level {
+  color: var(--clr-soft-pink);
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header {
+    width: auto;
+    margin: auto;
+  }
+
+  .star-1,
+  .star-2,
+  .star-3 {
+    align-self: center;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    margin: 0;
+  }
+
+  .testimonial {
+    grid-template-columns: 1fr;
+    margin: auto;
+    width: auto;
+  }
+
+  .card {
+    width: auto;
+    margin: auto;
+  }
+}
